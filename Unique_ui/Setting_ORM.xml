@@ -1,0 +1,24 @@
+<Setting>
+
+  // Database ORM in UNIQUE
+  // localhost
+  // OWNERDB
+  // uniquedb.ckgq5ecwqhep.ap-southeast-1.rds.amazonaws.com,1433
+  // NEW DB -> 27.254.174.73	-> change in Entity --> ConnectString.cs
+  // User name uniqueadmin
+  // password Admin@2021
+	
+  
+  <dbserver>27.254.174.73</dbserver>
+ <dbORM_name>UNIQUE_DB</dbORM_name>
+  <dbORM_user>uniqueadmin</dbORM_user>
+  <dbORM_pass>rmSyQFsQCHYvNkf93i/weFuX0dnb9vIDtcyG+UaD1V8=</dbORM_pass>
+
+  <password_close>FhqRUfhGw7tU2qefaeL89zyZ+cDwM9yXiO+5TweAMV8=</password_close>
+  <Length_Accnum>11</Length_Accnum>
+
+  // Path Spy  ==> filename = [RECTUBE_ORM.spy]
+  <pathSPY>C:\_DEV\spy\</pathSPY>
+  <pathASTM>C:\_DEV\spy\</pathASTM>
+  
+</Setting>

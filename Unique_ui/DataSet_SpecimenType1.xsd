@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet_SpecimenType" targetNamespace="http://tempuri.org/DataSet_SpecimenType1.xsd" xmlns:mstns="http://tempuri.org/DataSet_SpecimenType1.xsd" xmlns="http://tempuri.org/DataSet_SpecimenType1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet_SpecimenType" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DataSet_SpecimenType" msprop:Generator_DataSetName="DataSet_SpecimenType">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DICT_COLL_MATERIALS" msprop:Generator_TableClassName="DICT_COLL_MATERIALSDataTable" msprop:Generator_TableVarName="tableDICT_COLL_MATERIALS" msprop:Generator_TablePropName="DICT_COLL_MATERIALS" msprop:Generator_RowDeletingName="DICT_COLL_MATERIALSRowDeleting" msprop:Generator_RowChangingName="DICT_COLL_MATERIALSRowChanging" msprop:Generator_RowEvHandlerName="DICT_COLL_MATERIALSRowChangeEventHandler" msprop:Generator_RowDeletedName="DICT_COLL_MATERIALSRowDeleted" msprop:Generator_UserTableName="DICT_COLL_MATERIALS" msprop:Generator_RowChangedName="DICT_COLL_MATERIALSRowChanged" msprop:Generator_RowEvArgName="DICT_COLL_MATERIALSRowChangeEvent" msprop:Generator_RowClassName="DICT_COLL_MATERIALSRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="COLLMATERIALCODE" msprop:Generator_ColumnVarNameInTable="columnCOLLMATERIALCODE" msprop:Generator_ColumnPropNameInRow="COLLMATERIALCODE" msprop:Generator_ColumnPropNameInTable="COLLMATERIALCODEColumn" msprop:Generator_UserColumnName="COLLMATERIALCODE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="COLLMATERIALTEXT" msprop:Generator_ColumnVarNameInTable="columnCOLLMATERIALTEXT" msprop:Generator_ColumnPropNameInRow="COLLMATERIALTEXT" msprop:Generator_ColumnPropNameInTable="COLLMATERIALTEXTColumn" msprop:Generator_UserColumnName="COLLMATERIALTEXT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="COLLMATERIALID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_ColumnVarNameInTable="columnCOLLMATERIALID" msprop:Generator_ColumnPropNameInRow="COLLMATERIALID" msprop:Generator_ColumnPropNameInTable="COLLMATERIALIDColumn" msprop:Generator_UserColumnName="COLLMATERIALID" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DICT_COLL_MATERIALS" />
+      <xs:field xpath="mstns:COLLMATERIALID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet_TEST" targetNamespace="http://tempuri.org/DataSet_TEST.xsd" xmlns:mstns="http://tempuri.org/DataSet_TEST.xsd" xmlns="http://tempuri.org/DataSet_TEST.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="UNIQUEConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="UNIQUEConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.UNIQUE.Properties.Settings.GlobalReference.Default.UNIQUEConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DICT_TESTSTableAdapter" GeneratorDataComponentClassName="DICT_TESTSTableAdapter" Name="DICT_TESTS" UserDataComponentName="DICT_TESTSTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="UNIQUEConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        DICT_TESTS.TESTID, DICT_TESTS.TESTCODE, DICT_TESTS.TESTNAME, DICT_TESTS.UNITS, DICT_TESTS.WARNINGUPPLIMIT, DICT_TESTS.WARNINGLOWLIMIT, DICT_TESTS.CLITICALLIMIT, DICT_TESTS.CLITICALUPPLIMIT, 
+                         DICT_TESTS.SECRETTEST, DICT_TESTS.NOTPRINTABLE, DICT_TESTS.ENDVALIDDATE, DICT_TESTS.LOGDATE, DICT_MB_PROTOCOLS.PROTOCOLTEXT, DICT_MB_PROTOCOLS.PROTOCOLID, 
+                         DICT_MB_PROTOCOLS.PROTOCOLCODE, DICT_TESTS.COLLMATERIALID
+FROM            DICT_TESTS LEFT OUTER JOIN
+                         DICT_MB_PROTOCOLS ON DICT_TESTS.PROTOCOLID = DICT_MB_PROTOCOLS.PROTOCOLID</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="TESTID" DataSetColumn="TESTID" />
+              <Mapping SourceColumn="TESTCODE" DataSetColumn="TESTCODE" />
+              <Mapping SourceColumn="TESTNAME" DataSetColumn="TESTNAME" />
+              <Mapping SourceColumn="UNITS" DataSetColumn="UNITS" />
+              <Mapping SourceColumn="WARNINGUPPLIMIT" DataSetColumn="WARNINGUPPLIMIT" />
+              <Mapping SourceColumn="WARNINGLOWLIMIT" DataSetColumn="WARNINGLOWLIMIT" />
+              <Mapping SourceColumn="CLITICALLIMIT" DataSetColumn="CLITICALLIMIT" />
+              <Mapping SourceColumn="CLITICALUPPLIMIT" DataSetColumn="CLITICALUPPLIMIT" />
+              <Mapping SourceColumn="SECRETTEST" DataSetColumn="SECRETTEST" />
+              <Mapping SourceColumn="NOTPRINTABLE" DataSetColumn="NOTPRINTABLE" />
+              <Mapping SourceColumn="ENDVALIDDATE" DataSetColumn="ENDVALIDDATE" />
+              <Mapping SourceColumn="LOGDATE" DataSetColumn="LOGDATE" />
+              <Mapping SourceColumn="PROTOCOLTEXT" DataSetColumn="PROTOCOLTEXT" />
+              <Mapping SourceColumn="PROTOCOLID" DataSetColumn="PROTOCOLID" />
+              <Mapping SourceColumn="PROTOCOLCODE" DataSetColumn="PROTOCOLCODE" />
+              <Mapping SourceColumn="COLLMATERIALID" DataSetColumn="COLLMATERIALID" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet_TEST" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet_TEST" msprop:Generator_UserDSName="DataSet_TEST">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DICT_TESTS" msprop:Generator_TableClassName="DICT_TESTSDataTable" msprop:Generator_TableVarName="tableDICT_TESTS" msprop:Generator_RowChangedName="DICT_TESTSRowChanged" msprop:Generator_TablePropName="DICT_TESTS" msprop:Generator_RowDeletingName="DICT_TESTSRowDeleting" msprop:Generator_RowChangingName="DICT_TESTSRowChanging" msprop:Generator_RowEvHandlerName="DICT_TESTSRowChangeEventHandler" msprop:Generator_RowDeletedName="DICT_TESTSRowDeleted" msprop:Generator_RowClassName="DICT_TESTSRow" msprop:Generator_UserTableName="DICT_TESTS" msprop:Generator_RowEvArgName="DICT_TESTSRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TESTID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnTESTID" msprop:Generator_ColumnPropNameInRow="TESTID" msprop:Generator_ColumnPropNameInTable="TESTIDColumn" msprop:Generator_UserColumnName="TESTID" type="xs:int" />
+              <xs:element name="TESTCODE" msprop:Generator_ColumnVarNameInTable="columnTESTCODE" msprop:Generator_ColumnPropNameInRow="TESTCODE" msprop:Generator_ColumnPropNameInTable="TESTCODEColumn" msprop:Generator_UserColumnName="TESTCODE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TESTNAME" msprop:Generator_ColumnVarNameInTable="columnTESTNAME" msprop:Generator_ColumnPropNameInRow="TESTNAME" msprop:Generator_ColumnPropNameInTable="TESTNAMEColumn" msprop:Generator_UserColumnName="TESTNAME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UNITS" msprop:Generator_ColumnVarNameInTable="columnUNITS" msprop:Generator_ColumnPropNameInRow="UNITS" msprop:Generator_ColumnPropNameInTable="UNITSColumn" msprop:Generator_UserColumnName="UNITS" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WARNINGUPPLIMIT" msprop:Generator_ColumnVarNameInTable="columnWARNINGUPPLIMIT" msprop:Generator_ColumnPropNameInRow="WARNINGUPPLIMIT" msprop:Generator_ColumnPropNameInTable="WARNINGUPPLIMITColumn" msprop:Generator_UserColumnName="WARNINGUPPLIMIT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WARNINGLOWLIMIT" msprop:Generator_ColumnVarNameInTable="columnWARNINGLOWLIMIT" msprop:Generator_ColumnPropNameInRow="WARNINGLOWLIMIT" msprop:Generator_ColumnPropNameInTable="WARNINGLOWLIMITColumn" msprop:Generator_UserColumnName="WARNINGLOWLIMIT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CLITICALLIMIT" msprop:Generator_ColumnVarNameInTable="columnCLITICALLIMIT" msprop:Generator_ColumnPropNameInRow="CLITICALLIMIT" msprop:Generator_ColumnPropNameInTable="CLITICALLIMITColumn" msprop:Generator_UserColumnName="CLITICALLIMIT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CLITICALUPPLIMIT" msprop:Generator_ColumnVarNameInTable="columnCLITICALUPPLIMIT" msprop:Generator_ColumnPropNameInRow="CLITICALUPPLIMIT" msprop:Generator_ColumnPropNameInTable="CLITICALUPPLIMITColumn" msprop:Generator_UserColumnName="CLITICALUPPLIMIT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SECRETTEST" msprop:Generator_ColumnVarNameInTable="columnSECRETTEST" msprop:Generator_ColumnPropNameInRow="SECRETTEST" msprop:Generator_ColumnPropNameInTable="SECRETTESTColumn" msprop:Generator_UserColumnName="SECRETTEST" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="NOTPRINTABLE" msprop:Generator_ColumnVarNameInTable="columnNOTPRINTABLE" msprop:Generator_ColumnPropNameInRow="NOTPRINTABLE" msprop:Generator_ColumnPropNameInTable="NOTPRINTABLEColumn" msprop:Generator_UserColumnName="NOTPRINTABLE" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="ENDVALIDDATE" msprop:Generator_ColumnVarNameInTable="columnENDVALIDDATE" msprop:Generator_ColumnPropNameInRow="ENDVALIDDATE" msprop:Generator_ColumnPropNameInTable="ENDVALIDDATEColumn" msprop:Generator_UserColumnName="ENDVALIDDATE" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="LOGDATE" msprop:Generator_ColumnVarNameInTable="columnLOGDATE" msprop:Generator_ColumnPropNameInRow="LOGDATE" msprop:Generator_ColumnPropNameInTable="LOGDATEColumn" msprop:Generator_UserColumnName="LOGDATE" type="xs:dateTime" />
+              <xs:element name="PROTOCOLTEXT" msprop:Generator_ColumnVarNameInTable="columnPROTOCOLTEXT" msprop:Generator_ColumnPropNameInRow="PROTOCOLTEXT" msprop:Generator_ColumnPropNameInTable="PROTOCOLTEXTColumn" msprop:Generator_UserColumnName="PROTOCOLTEXT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PROTOCOLID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnPROTOCOLID" msprop:Generator_ColumnPropNameInRow="PROTOCOLID" msprop:Generator_ColumnPropNameInTable="PROTOCOLIDColumn" msprop:Generator_UserColumnName="PROTOCOLID" type="xs:int" minOccurs="0" />
+              <xs:element name="PROTOCOLCODE" msprop:Generator_ColumnVarNameInTable="columnPROTOCOLCODE" msprop:Generator_ColumnPropNameInRow="PROTOCOLCODE" msprop:Generator_ColumnPropNameInTable="PROTOCOLCODEColumn" msprop:Generator_UserColumnName="PROTOCOLCODE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="COLLMATERIALID" msprop:Generator_ColumnVarNameInTable="columnCOLLMATERIALID" msprop:Generator_ColumnPropNameInRow="COLLMATERIALID" msprop:Generator_ColumnPropNameInTable="COLLMATERIALIDColumn" msprop:Generator_UserColumnName="COLLMATERIALID" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DICT_TESTS" />
+      <xs:field xpath="mstns:TESTID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

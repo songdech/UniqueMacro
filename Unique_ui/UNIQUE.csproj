@@ -1,0 +1,2222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1315BF91-CDF1-46D3-9BF2-B670FFFB563A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UNIQUE</RootNamespace>
+    <AssemblyName>UNIQUE</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v19.2.Core, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.CodeParser.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Dashboard.v19.2.Core, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Dashboard.v19.2.Win, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v19.2.UI, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.ExpressApp.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.ExpressApp.Win.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Images.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Map.v19.2.Core, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v19.2.Core, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.PivotGrid.v19.2.Core, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v19.2.Core, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v19.2.Export, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v19.2.Core, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v19.2.Core, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v19.2.Core, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.TreeMap.v19.2.Core, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v19.2.UI, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v19.2.Extensions, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v19.2.UI, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v19.2.Wizard, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v19.2.Core, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v19.2.Presets, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v19.2.Win, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraMap.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPivotGrid.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v19.2.Core, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeMap.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AgeCalculate.cs" />
+    <Compile Include="clsControlsData.cs" />
+    <Compile Include="clsLoginInfomations.cs" />
+    <Compile Include="Code\AES128_EncryptAndDecrypt.cs" />
+    <Compile Include="Code\Connection_ORM.cs" />
+    <Compile Include="Code\IniParser.cs" />
+    <Compile Include="Code\UniqueController.cs" />
+    <Compile Include="Code\Writedatalog.cs" />
+    <Compile Include="ConfigurationFld\AddLocations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigurationFld\AddLocations.Designer.cs">
+      <DependentUpon>AddLocations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationFld\AntibioGroup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConfigurationFld\AntibioGroup.Designer.cs">
+      <DependentUpon>AntibioGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationFld\Antibiotic_Fams.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConfigurationFld\Antibiotic_Fams.Designer.cs">
+      <DependentUpon>Antibiotic_Fams.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationFld\Antibitotic.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConfigurationFld\Antibitotic.Designer.cs">
+      <DependentUpon>Antibitotic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationFld\BreakPoints.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConfigurationFld\BreakPoints.Designer.cs">
+      <DependentUpon>BreakPoints.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationFld\Chemistry.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConfigurationFld\Chemistry.Designer.cs">
+      <DependentUpon>Chemistry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationFld\CustomizeResult.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConfigurationFld\CustomizeResult.Designer.cs">
+      <DependentUpon>CustomizeResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationFld\DataSet_Antibiotic.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Antibiotic.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationFld\DataSet_Antibiotic_Group.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Antibiotic_Group.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationFld\DataSet_Media.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Media.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationFld\DataSet_Protocol.cs">
+      <DependentUpon>DataSet_Protocol.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationFld\DataSet_Protocol.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Protocol.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationFld\DataSet_Specimen.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Specimen.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationFld\DataSet_Stain.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Stain.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationFld\DataSet_TEST.cs">
+      <DependentUpon>DataSet_TEST.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationFld\DataSet_TEST.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_TEST.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationFld\Detection_test.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConfigurationFld\Detection_test.designer.cs">
+      <DependentUpon>Detection_test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationFld\Expert_rule.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConfigurationFld\Expert_rule.designer.cs">
+      <DependentUpon>Expert_rule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationFld\FrmAddBattery_Mapcode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigurationFld\FrmAddBattery_Mapcode.Designer.cs">
+      <DependentUpon>FrmAddBattery_Mapcode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationFld\frmAddChemistryTests.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigurationFld\frmAddChemistryTests.Designer.cs">
+      <DependentUpon>frmAddChemistryTests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationFld\frmAddColony.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigurationFld\frmAddColony.Designer.cs">
+      <DependentUpon>frmAddColony.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationFld\frmAddDetectionTests.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigurationFld\frmAddDetectionTests.designer.cs">
+      <DependentUpon>frmAddDetectionTests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationFld\frmAddExpertRule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigurationFld\frmAddExpertRule.designer.cs">
+      <DependentUpon>frmAddExpertRule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationFld\frmAddOrganism.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigurationFld\frmAddOrganism.designer.cs">
+      <DependentUpon>frmAddOrganism.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationFld\frmAddOrganism_FAM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigurationFld\frmAddOrganism_FAM.Designer.cs">
+      <DependentUpon>frmAddOrganism_FAM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationFld\frmAddSensitivityPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigurationFld\frmAddSensitivityPanel.Designer.cs">
+      <DependentUpon>frmAddSensitivityPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationFld\frmAddBattery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigurationFld\frmAddBattery.Designer.cs">
+      <DependentUpon>frmAddBattery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationFld\frmAddSpecimenGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigurationFld\frmAddSpecimenGroup.Designer.cs">
+      <DependentUpon>frmAddSpecimenGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationFld\frmAddUSERS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigurationFld\frmAddUSERS.designer.cs">
+      <DependentUpon>frmAddUSERS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationFld\frmAddUSERS_ROLE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigurationFld\frmAddUSERS_ROLE.designer.cs">
+      <DependentUpon>frmAddUSERS_ROLE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationFld\frmBreakpoint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigurationFld\frmBreakpoint.Designer.cs">
+      <DependentUpon>frmBreakpoint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationFld\frmColony.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConfigurationFld\frmColony.Designer.cs">
+      <DependentUpon>frmColony.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationFld\frmConfigurationMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigurationFld\frmConfigurationMain.designer.cs">
+      <DependentUpon>frmConfigurationMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationFld\frmCustomize_RESULT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigurationFld\frmCustomize_RESULT.Designer.cs">
+      <DependentUpon>frmCustomize_RESULT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationFld\frmDoctors.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConfigurationFld\frmDoctors.Designer.cs">
+      <DependentUpon>frmDoctors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationFld\frmAddAntibiotic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigurationFld\frmAddAntibiotic.Designer.cs">
+      <DependentUpon>frmAddAntibiotic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationFld\frmAddCustomizedResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigurationFld\frmAddCustomizedResult.Designer.cs">
+      <DependentUpon>frmAddCustomizedResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationFld\frmAddDoctors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigurationFld\frmAddDoctors.Designer.cs">
+      <DependentUpon>frmAddDoctors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationFld\frmAddMedia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigurationFld\frmAddMedia.Designer.cs">
+      <DependentUpon>frmAddMedia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationFld\frmAddProtocol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigurationFld\frmAddProtocol.Designer.cs">
+      <DependentUpon>frmAddProtocol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationFld\frmAddSpecimen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigurationFld\frmAddSpecimen.Designer.cs">
+      <DependentUpon>frmAddSpecimen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationFld\frmAddStain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigurationFld\frmAddStain.Designer.cs">
+      <DependentUpon>frmAddStain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationFld\frmAddTestDictionary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigurationFld\frmAddTestDictionary.Designer.cs">
+      <DependentUpon>frmAddTestDictionary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationFld\frmAddAntibiotic_FAM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigurationFld\frmAddAntibiotic_FAM.Designer.cs">
+      <DependentUpon>frmAddAntibiotic_FAM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationFld\frmCustomize_LIST.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigurationFld\frmCustomize_LIST.Designer.cs">
+      <DependentUpon>frmCustomize_LIST.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationFld\frmSearchdict.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigurationFld\frmSearchdict.Designer.cs">
+      <DependentUpon>frmSearchdict.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationFld\Organism.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConfigurationFld\Organism.designer.cs">
+      <DependentUpon>Organism.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationFld\Organisms_Fams.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConfigurationFld\Organisms_Fams.Designer.cs">
+      <DependentUpon>Organisms_Fams.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationFld\SensitivitiesPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConfigurationFld\SensitivitiesPanel.Designer.cs">
+      <DependentUpon>SensitivitiesPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationFld\SystemMGNT.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConfigurationFld\SystemMGNT.Designer.cs">
+      <DependentUpon>SystemMGNT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationFld\frmLocations.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConfigurationFld\frmLocations.Designer.cs">
+      <DependentUpon>frmLocations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationFld\Media.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConfigurationFld\Media.Designer.cs">
+      <DependentUpon>Media.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationFld\menubar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConfigurationFld\menubar.Designer.cs">
+      <DependentUpon>menubar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationFld\Protocol.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConfigurationFld\Protocol.Designer.cs">
+      <DependentUpon>Protocol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationFld\Battery.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConfigurationFld\Battery.Designer.cs">
+      <DependentUpon>Battery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationFld\SpecimenGroup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConfigurationFld\SpecimenGroup.Designer.cs">
+      <DependentUpon>SpecimenGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationFld\Specimen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConfigurationFld\Specimen.Designer.cs">
+      <DependentUpon>Specimen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationFld\stain.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConfigurationFld\stain.Designer.cs">
+      <DependentUpon>stain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationFld\TestDictionary.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConfigurationFld\TestDictionary.Designer.cs">
+      <DependentUpon>TestDictionary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationFld\USERS.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConfigurationFld\USERS.designer.cs">
+      <DependentUpon>USERS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationFld\USERS_ROLE.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConfigurationFld\USERS_ROLE.designer.cs">
+      <DependentUpon>USERS_ROLE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConnectionString.cs" />
+    <Compile Include="ControlParameter.cs" />
+    <Compile Include="Controls.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls.Designer.cs">
+      <DependentUpon>Controls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet_CustomizeResult.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_CustomizeResult.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset_SpecimenType.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dataset_SpecimenType.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet_SpecimenType1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_SpecimenType1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain_New.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain_New.Designer.cs">
+      <DependentUpon>FormMain_New.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ConfigurationApp\DBSetting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\ConfigurationApp\DBSetting.designer.cs">
+      <DependentUpon>DBSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ConfigurationApp\frmConfigurationApp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ConfigurationApp\frmConfigurationApp.designer.cs">
+      <DependentUpon>frmConfigurationApp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ConfigurationApp\frmDatabaseSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ConfigurationApp\frmDatabaseSetting.designer.cs">
+      <DependentUpon>frmDatabaseSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dashboard\Form_DashboardCR_Routine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dashboard\Form_DashboardCR_Routine.Designer.cs">
+      <DependentUpon>Form_DashboardCR_Routine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dashboard\Form_DashboardCR_Urgent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dashboard\Form_DashboardCR_Urgent.Designer.cs">
+      <DependentUpon>Form_DashboardCR_Urgent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dashboard\Form_DashboardPR_Routine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dashboard\Form_DashboardPR_Routine.Designer.cs">
+      <DependentUpon>Form_DashboardPR_Routine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dashboard\Form_DashboardPR_Urgent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dashboard\Form_DashboardPR_Urgent.Designer.cs">
+      <DependentUpon>Form_DashboardPR_Urgent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dashboard\Form_DashboardRC_Routine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dashboard\Form_DashboardRC_Routine.designer.cs">
+      <DependentUpon>Form_DashboardRC_Routine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dashboard\Form_DashboardRC_Urgent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dashboard\Form_DashboardRC_Urgent.designer.cs">
+      <DependentUpon>Form_DashboardRC_Urgent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dashboard\Form_DashboardRE_Routine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dashboard\Form_DashboardRE_Routine.Designer.cs">
+      <DependentUpon>Form_DashboardRE_Routine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dashboard\Form_DashboardRE_Urgent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dashboard\Form_DashboardRE_Urgent.Designer.cs">
+      <DependentUpon>Form_DashboardRE_Urgent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dashboard\Form_DashboardRP_Urgent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dashboard\Form_DashboardRP_Urgent.Designer.cs">
+      <DependentUpon>Form_DashboardRP_Urgent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dashboard\Form_DashboardRP_Routine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dashboard\Form_DashboardRP_Routine.Designer.cs">
+      <DependentUpon>Form_DashboardRP_Routine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dashboard\Form_DashboardSR_Routine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dashboard\Form_DashboardSR_Routine.Designer.cs">
+      <DependentUpon>Form_DashboardSR_Routine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dashboard\Form_DashboardSR_Urgent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dashboard\Form_DashboardSR_Urgent.designer.cs">
+      <DependentUpon>Form_DashboardSR_Urgent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dashboard\Form_DashboardTR_Routine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dashboard\Form_DashboardTR_Routine.Designer.cs">
+      <DependentUpon>Form_DashboardTR_Routine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dashboard\Form_DashboardTR_Urgent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dashboard\Form_DashboardTR_Urgent.Designer.cs">
+      <DependentUpon>Form_DashboardTR_Urgent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GeneralSetting\Class_Dashboard_EditItem.cs" />
+    <Compile Include="Forms\GeneralSetting\frmCounterDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GeneralSetting\frmCounterDashboard.designer.cs">
+      <DependentUpon>frmCounterDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GeneralSetting\frmUserMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GeneralSetting\frmUserMaster.designer.cs">
+      <DependentUpon>frmUserMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GeneralSetting\UserControlDashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\GeneralSetting\UserControlDashboard.designer.cs">
+      <DependentUpon>UserControlDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GeneralSetting\UserMaster.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\GeneralSetting\UserMaster.Designer.cs">
+      <DependentUpon>UserMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Report_worksheet\Form_Worksheet_printing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Report_worksheet\Form_Worksheet_printing.designer.cs">
+      <DependentUpon>Form_Worksheet_printing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Request\Form_PatientLists.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Request\Form_PatientLists.Designer.cs">
+      <DependentUpon>Form_PatientLists.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Request\Form_PATIENT_INSERT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Request\Form_PATIENT_INSERT.designer.cs">
+      <DependentUpon>Form_PATIENT_INSERT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Request\Form_REQUESTS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Request\Form_REQUESTS.designer.cs">
+      <DependentUpon>Form_REQUESTS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Request\Form_REQUESTS_ITEM_.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Request\Form_REQUESTS_ITEM_.designer.cs">
+      <DependentUpon>Form_REQUESTS_ITEM_.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Request\Form_REQUEST_NEWORDER.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Request\Form_REQUEST_NEWORDER.designer.cs">
+      <DependentUpon>Form_REQUEST_NEWORDER.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Result_report\Controller\MBReportController.cs" />
+    <Compile Include="Forms\Result_report\DAO\MBReportDAO.cs" />
+    <Compile Include="Forms\Result_report\Entities\MBReportM.cs" />
+    <Compile Include="Forms\Result_report\Form_config.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Result_report\Form_config.designer.cs">
+      <DependentUpon>Form_config.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Result_report\Micro_Printout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Result_report\Micro_Printout.designer.cs">
+      <DependentUpon>Micro_Printout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Result_report\Micro_Manual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Result_report\Micro_Manual.designer.cs">
+      <DependentUpon>Micro_Manual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Result_report\Template_Culture.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Result_report\Template_Culture.designer.cs">
+      <DependentUpon>Template_Culture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Result_report\Template_Grams.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Result_report\Template_Grams.designer.cs">
+      <DependentUpon>Template_Grams.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Result_report\Template_Hemoculture.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Result_report\Template_Hemoculture.designer.cs">
+      <DependentUpon>Template_Hemoculture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Specimen\Form_Rectube.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Specimen\Form_Rectube.designer.cs">
+      <DependentUpon>Form_Rectube.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Specimen\Form_Reqtube_About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Specimen\Form_Reqtube_About.designer.cs">
+      <DependentUpon>Form_Reqtube_About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStainList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStainList.Designer.cs">
+      <DependentUpon>frmStainList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Instrument\MicroScan\Class\CJButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Instrument\MicroScan\Class\cjTextbox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Instrument\MicroScan\Class\cjTextbox.Designer.cs">
+      <DependentUpon>cjTextbox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Instrument\MicroScan\Class\INIClass.cs" />
+    <Compile Include="Instrument\MicroScan\Class\Writelog.cs" />
+    <Compile Include="Instrument\MicroScan\Controller\MicroscanController.cs" />
+    <Compile Include="Instrument\MicroScan\DAO\CSMicroscanDAO.cs" />
+    <Compile Include="Instrument\MicroScan\Entites\Terminal_GETM.cs" />
+    <Compile Include="Instrument\MicroScan\Entites\Terminal_SETM.cs" />
+    <Compile Include="Instrument\MicroScan\Form_Terminal\Form_Match.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Instrument\MicroScan\Form_Terminal\Form_Match.Designer.cs">
+      <DependentUpon>Form_Match.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Instrument\MicroScan\Form_Terminal\Form_microscan_config.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Instrument\MicroScan\Form_Terminal\Form_microscan_config.Designer.cs">
+      <DependentUpon>Form_microscan_config.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Instrument\MicroScan\Form_Terminal\Terminal_Matching.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Instrument\MicroScan\Form_Terminal\Terminal_Matching.designer.cs">
+      <DependentUpon>Terminal_Matching.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Instrument\MicroScan\Form_Terminal\Terminal_MicroScan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Instrument\MicroScan\Form_Terminal\Terminal_MicroScan.designer.cs">
+      <DependentUpon>Terminal_MicroScan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Instrument\MicroScan\Settings_MicroScan.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings_MicroScan.settings</DependentUpon>
+    </Compile>
+    <Compile Include="MessageFilter.cs" />
+    <Compile Include="Patient.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Patient.Designer.cs">
+      <DependentUpon>Patient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PatientFld\FrmMergePatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PatientFld\FrmMergePatient.Designer.cs">
+      <DependentUpon>FrmMergePatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PatientFld\frmPatientHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PatientFld\frmPatientHistory.Designer.cs">
+      <DependentUpon>frmPatientHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PatientFld\frmPatientMgnt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PatientFld\frmPatientMgnt.Designer.cs">
+      <DependentUpon>frmPatientMgnt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PatientFld\frmPatientRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PatientFld\frmPatientRegister.Designer.cs">
+      <DependentUpon>frmPatientRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RequestFld\DataSet_SearchPAT.cs">
+      <DependentUpon>DataSet_SearchPAT.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RequestFld\DataSet_SearchPAT.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_SearchPAT.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RequestFld\frmRequestCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RequestFld\frmRequestCreate.Designer.cs">
+      <DependentUpon>frmRequestCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RequestFld\frmRequestMgnt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RequestFld\frmRequestMgnt.Designer.cs">
+      <DependentUpon>frmRequestMgnt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Result\ctlIdenAndSend.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Result\ctlIdenAndSend.Designer.cs">
+      <DependentUpon>ctlIdenAndSend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Result\CultureIdenandSen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Result\CultureIdenandSen.Designer.cs">
+      <DependentUpon>CultureIdenandSen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Result\CultureIdenSen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Result\CultureIdenSen.Designer.cs">
+      <DependentUpon>CultureIdenSen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Result\CultureIdentification.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Result\CultureIdentification.Designer.cs">
+      <DependentUpon>CultureIdentification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Result\CulturelIndenAndSensitivity.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Result\CulturelIndenAndSensitivity.Designer.cs">
+      <DependentUpon>CulturelIndenAndSensitivity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Result\Culture_Identification.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Result\Culture_Identification.Designer.cs">
+      <DependentUpon>Culture_Identification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Result\DataSet_Antimicrobial_Breakpoint.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Antimicrobial_Breakpoint.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Result\DataSet_Culture.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Culture.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Result\DataSet_StainRes.cs">
+      <DependentUpon>DataSet_StainRes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Result\DataSet_StainRes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_StainRes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Result\frmSearchList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Result\frmSearchList.Designer.cs">
+      <DependentUpon>frmSearchList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Result\frmStain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Result\frmStain.Designer.cs">
+      <DependentUpon>frmStain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Result\frmIdentificationAndSensititities.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Result\frmIdentificationAndSensititities.Designer.cs">
+      <DependentUpon>frmIdentificationAndSensititities.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Result\frmResultSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Result\frmResultSearch.Designer.cs">
+      <DependentUpon>frmResultSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Result\gramstain.cs" />
+    <Compile Include="Result\IdenandSen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Result\IdenandSen.Designer.cs">
+      <DependentUpon>IdenandSen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RibbonForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RibbonForm1.Designer.cs">
+      <DependentUpon>RibbonForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StainObservations.cs" />
+    <Compile Include="Widget\UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widget\UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Widget\WidgetView\BacterialActivities.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widget\WidgetView\BacterialActivities.Designer.cs">
+      <DependentUpon>BacterialActivities.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Widget\WidgetView\DashBoardCR.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widget\WidgetView\DashBoardCR.Designer.cs">
+      <DependentUpon>DashBoardCR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Widget\WidgetView\DashboardPR.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widget\WidgetView\DashboardPR.Designer.cs">
+      <DependentUpon>DashboardPR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Widget\WidgetView\DashboardRC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widget\WidgetView\DashboardRC.designer.cs">
+      <DependentUpon>DashboardRC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Widget\WidgetView\DashboardRE.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widget\WidgetView\DashboardRE.Designer.cs">
+      <DependentUpon>DashboardRE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Widget\WidgetView\DashboardRP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widget\WidgetView\DashboardRP.Designer.cs">
+      <DependentUpon>DashboardRP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Widget\WidgetView\DashboardSR.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widget\WidgetView\DashboardSR.designer.cs">
+      <DependentUpon>DashboardSR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Widget\WidgetView\DashboardTR.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widget\WidgetView\DashboardTR.Designer.cs">
+      <DependentUpon>DashboardTR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Widget\WidgetView\Datenow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widget\WidgetView\Datenow.Designer.cs">
+      <DependentUpon>Datenow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Widget\WidgetView\Detail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widget\WidgetView\Detail.Designer.cs">
+      <DependentUpon>Detail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Widget\WidgetView\exampleGhrap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widget\WidgetView\exampleGhrap.Designer.cs">
+      <DependentUpon>exampleGhrap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Widget\WidgetView\LoginInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widget\WidgetView\LoginInfo.Designer.cs">
+      <DependentUpon>LoginInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Widget\WidgetView\navMenubar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widget\WidgetView\navMenubar.Designer.cs">
+      <DependentUpon>navMenubar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Widget\WidgetView\patientonthisweek.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widget\WidgetView\patientonthisweek.Designer.cs">
+      <DependentUpon>patientonthisweek.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Widget\WidgetView\Pending Report by Locations.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widget\WidgetView\Pending Report by Locations.Designer.cs">
+      <DependentUpon>Pending Report by Locations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Widget\WidgetView\PendingByDoctor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widget\WidgetView\PendingByDoctor.Designer.cs">
+      <DependentUpon>PendingByDoctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Widget\WidgetView\PendingList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widget\WidgetView\PendingList.Designer.cs">
+      <DependentUpon>PendingList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Widget\WidgetView\TodayActivities.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widget\WidgetView\TodayActivities.Designer.cs">
+      <DependentUpon>TodayActivities.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Widget\WidgetView\UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widget\WidgetView\UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UNIQUEDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UNIQUEDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UNIQUEDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UNIQUEDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UNIQUEDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UNIQUEDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UserMaster.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserMaster.designer.cs">
+      <DependentUpon>UserMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Welcome_New.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Welcome_New.Designer.cs">
+      <DependentUpon>Welcome_New.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Welcome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Welcome.Designer.cs">
+      <DependentUpon>Welcome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Widget\WidgetView_New\DashBoardCR_New.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widget\WidgetView_New\DashBoardCR_New.Designer.cs">
+      <DependentUpon>DashBoardCR_New.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XtraUserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="XtraUserControl1.Designer.cs">
+      <DependentUpon>XtraUserControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Xtra_report\XtraReport_WorkSheet.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Xtra_report\XtraReport_WorkSheet.designer.cs">
+      <DependentUpon>XtraReport_WorkSheet.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ConfigurationFld\AddLocations.resx">
+      <DependentUpon>AddLocations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationFld\AntibioGroup.resx">
+      <DependentUpon>AntibioGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationFld\Antibiotic_Fams.resx">
+      <DependentUpon>Antibiotic_Fams.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationFld\Antibitotic.resx">
+      <DependentUpon>Antibitotic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationFld\BreakPoints.resx">
+      <DependentUpon>BreakPoints.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationFld\Chemistry.resx">
+      <DependentUpon>Chemistry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationFld\CustomizeResult.resx">
+      <DependentUpon>CustomizeResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationFld\Detection_test.resx">
+      <DependentUpon>Detection_test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationFld\Expert_rule.resx">
+      <DependentUpon>Expert_rule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationFld\FrmAddBattery_Mapcode.resx">
+      <DependentUpon>FrmAddBattery_Mapcode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationFld\frmAddChemistryTests.resx">
+      <DependentUpon>frmAddChemistryTests.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationFld\frmAddColony.resx">
+      <DependentUpon>frmAddColony.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationFld\frmAddDetectionTests.resx">
+      <DependentUpon>frmAddDetectionTests.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationFld\frmAddExpertRule.resx">
+      <DependentUpon>frmAddExpertRule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationFld\frmAddOrganism.resx">
+      <DependentUpon>frmAddOrganism.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationFld\frmAddOrganism_FAM.resx">
+      <DependentUpon>frmAddOrganism_FAM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationFld\frmAddSensitivityPanel.resx">
+      <DependentUpon>frmAddSensitivityPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationFld\frmAddBattery.resx">
+      <DependentUpon>frmAddBattery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationFld\frmAddSpecimenGroup.resx">
+      <DependentUpon>frmAddSpecimenGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationFld\frmAddUSERS.resx">
+      <DependentUpon>frmAddUSERS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationFld\frmAddUSERS_ROLE.resx">
+      <DependentUpon>frmAddUSERS_ROLE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationFld\frmBreakpoint.resx">
+      <DependentUpon>frmBreakpoint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationFld\frmColony.resx">
+      <DependentUpon>frmColony.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationFld\frmConfigurationMain.resx">
+      <DependentUpon>frmConfigurationMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationFld\frmCustomize_RESULT.resx">
+      <DependentUpon>frmCustomize_RESULT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationFld\frmDoctors.resx">
+      <DependentUpon>frmDoctors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationFld\frmAddAntibiotic.resx">
+      <DependentUpon>frmAddAntibiotic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationFld\frmAddCustomizedResult.resx">
+      <DependentUpon>frmAddCustomizedResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationFld\frmAddDoctors.resx">
+      <DependentUpon>frmAddDoctors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationFld\frmAddMedia.resx">
+      <DependentUpon>frmAddMedia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationFld\frmAddProtocol.resx">
+      <DependentUpon>frmAddProtocol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationFld\frmAddSpecimen.resx">
+      <DependentUpon>frmAddSpecimen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationFld\frmAddStain.resx">
+      <DependentUpon>frmAddStain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationFld\frmAddTestDictionary.resx">
+      <DependentUpon>frmAddTestDictionary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationFld\frmAddAntibiotic_FAM.resx">
+      <DependentUpon>frmAddAntibiotic_FAM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationFld\frmCustomize_LIST.resx">
+      <DependentUpon>frmCustomize_LIST.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationFld\frmSearchdict.resx">
+      <DependentUpon>frmSearchdict.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationFld\Organism.resx">
+      <DependentUpon>Organism.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationFld\Organisms_Fams.resx">
+      <DependentUpon>Organisms_Fams.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationFld\SensitivitiesPanel.resx">
+      <DependentUpon>SensitivitiesPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationFld\SystemMGNT.resx">
+      <DependentUpon>SystemMGNT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationFld\frmLocations.resx">
+      <DependentUpon>frmLocations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationFld\Media.resx">
+      <DependentUpon>Media.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationFld\menubar.resx">
+      <DependentUpon>menubar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationFld\Protocol.resx">
+      <DependentUpon>Protocol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationFld\Battery.resx">
+      <DependentUpon>Battery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationFld\SpecimenGroup.resx">
+      <DependentUpon>SpecimenGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationFld\Specimen.resx">
+      <DependentUpon>Specimen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationFld\stain.resx">
+      <DependentUpon>stain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationFld\TestDictionary.resx">
+      <DependentUpon>TestDictionary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationFld\USERS.resx">
+      <DependentUpon>USERS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationFld\USERS_ROLE.resx">
+      <DependentUpon>USERS_ROLE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls.resx">
+      <DependentUpon>Controls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain_New.resx">
+      <DependentUpon>FormMain_New.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ConfigurationApp\DBSetting.resx">
+      <DependentUpon>DBSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ConfigurationApp\frmConfigurationApp.resx">
+      <DependentUpon>frmConfigurationApp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ConfigurationApp\frmDatabaseSetting.resx">
+      <DependentUpon>frmDatabaseSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dashboard\Form_DashboardCR_Routine.resx">
+      <DependentUpon>Form_DashboardCR_Routine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dashboard\Form_DashboardCR_Urgent.resx">
+      <DependentUpon>Form_DashboardCR_Urgent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dashboard\Form_DashboardPR_Routine.resx">
+      <DependentUpon>Form_DashboardPR_Routine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dashboard\Form_DashboardPR_Urgent.resx">
+      <DependentUpon>Form_DashboardPR_Urgent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dashboard\Form_DashboardRC_Routine.resx">
+      <DependentUpon>Form_DashboardRC_Routine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dashboard\Form_DashboardRC_Urgent.resx">
+      <DependentUpon>Form_DashboardRC_Urgent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dashboard\Form_DashboardRE_Routine.resx">
+      <DependentUpon>Form_DashboardRE_Routine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dashboard\Form_DashboardRE_Urgent.resx">
+      <DependentUpon>Form_DashboardRE_Urgent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dashboard\Form_DashboardRP_Urgent.resx">
+      <DependentUpon>Form_DashboardRP_Urgent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dashboard\Form_DashboardRP_Routine.resx">
+      <DependentUpon>Form_DashboardRP_Routine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dashboard\Form_DashboardSR_Routine.resx">
+      <DependentUpon>Form_DashboardSR_Routine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dashboard\Form_DashboardSR_Urgent.resx">
+      <DependentUpon>Form_DashboardSR_Urgent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dashboard\Form_DashboardTR_Routine.resx">
+      <DependentUpon>Form_DashboardTR_Routine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dashboard\Form_DashboardTR_Urgent.resx">
+      <DependentUpon>Form_DashboardTR_Urgent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GeneralSetting\frmCounterDashboard.resx">
+      <DependentUpon>frmCounterDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GeneralSetting\frmUserMaster.resx">
+      <DependentUpon>frmUserMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GeneralSetting\UserControlDashboard.resx">
+      <DependentUpon>UserControlDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GeneralSetting\UserMaster.resx">
+      <DependentUpon>UserMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Report_worksheet\Form_Worksheet_printing.resx">
+      <DependentUpon>Form_Worksheet_printing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Request\Form_PatientLists.resx">
+      <DependentUpon>Form_PatientLists.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Request\Form_PATIENT_INSERT.resx">
+      <DependentUpon>Form_PATIENT_INSERT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Request\Form_REQUESTS.resx">
+      <DependentUpon>Form_REQUESTS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Request\Form_REQUESTS_ITEM_.resx">
+      <DependentUpon>Form_REQUESTS_ITEM_.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Request\Form_REQUEST_NEWORDER.resx">
+      <DependentUpon>Form_REQUEST_NEWORDER.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Result_report\Form_config.resx">
+      <DependentUpon>Form_config.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Result_report\Micro_Printout.resx">
+      <DependentUpon>Micro_Printout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Result_report\Micro_Manual.resx">
+      <DependentUpon>Micro_Manual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Result_report\Template_Culture.resx">
+      <DependentUpon>Template_Culture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Result_report\Template_Grams.resx">
+      <DependentUpon>Template_Grams.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Result_report\Template_Hemoculture.resx">
+      <DependentUpon>Template_Hemoculture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Specimen\Form_Rectube.resx">
+      <DependentUpon>Form_Rectube.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Specimen\Form_Reqtube_About.resx">
+      <DependentUpon>Form_Reqtube_About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStainList.resx">
+      <DependentUpon>frmStainList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Instrument\MicroScan\Class\cjTextbox.resx">
+      <DependentUpon>cjTextbox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Instrument\MicroScan\Form_Terminal\Form_Match.resx">
+      <DependentUpon>Form_Match.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Instrument\MicroScan\Form_Terminal\Form_microscan_config.resx">
+      <DependentUpon>Form_microscan_config.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Instrument\MicroScan\Form_Terminal\Terminal_Matching.resx">
+      <DependentUpon>Terminal_Matching.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Instrument\MicroScan\Form_Terminal\Terminal_MicroScan.resx">
+      <DependentUpon>Terminal_MicroScan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Patient.resx">
+      <DependentUpon>Patient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PatientFld\FrmMergePatient.resx">
+      <DependentUpon>FrmMergePatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PatientFld\frmPatientHistory.resx">
+      <DependentUpon>frmPatientHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PatientFld\frmPatientMgnt.resx">
+      <DependentUpon>frmPatientMgnt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PatientFld\frmPatientRegister.resx">
+      <DependentUpon>frmPatientRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="RequestFld\frmRequestCreate.resx">
+      <DependentUpon>frmRequestCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RequestFld\frmRequestMgnt.resx">
+      <DependentUpon>frmRequestMgnt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Result\ctlIdenAndSend.resx">
+      <DependentUpon>ctlIdenAndSend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Result\CultureIdenandSen.resx">
+      <DependentUpon>CultureIdenandSen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Result\CultureIdenSen.resx">
+      <DependentUpon>CultureIdenSen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Result\CultureIdentification.resx">
+      <DependentUpon>CultureIdentification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Result\CulturelIndenAndSensitivity.resx">
+      <DependentUpon>CulturelIndenAndSensitivity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Result\Culture_Identification.resx">
+      <DependentUpon>Culture_Identification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Result\frmSearchList.resx">
+      <DependentUpon>frmSearchList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Result\frmStain.resx">
+      <DependentUpon>frmStain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Result\frmIdentificationAndSensititities.resx">
+      <DependentUpon>frmIdentificationAndSensititities.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Result\frmResultSearch.resx">
+      <DependentUpon>frmResultSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Result\IdenandSen.resx">
+      <DependentUpon>IdenandSen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RibbonForm1.resx">
+      <DependentUpon>RibbonForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widget\UserControl1.resx">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widget\WidgetView\BacterialActivities.resx">
+      <DependentUpon>BacterialActivities.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widget\WidgetView\DashBoardCR.resx">
+      <DependentUpon>DashBoardCR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widget\WidgetView\DashboardPR.resx">
+      <DependentUpon>DashboardPR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widget\WidgetView\DashboardRC.resx">
+      <DependentUpon>DashboardRC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widget\WidgetView\DashboardRE.resx">
+      <DependentUpon>DashboardRE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widget\WidgetView\DashboardRP.resx">
+      <DependentUpon>DashboardRP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widget\WidgetView\DashboardSR.resx">
+      <DependentUpon>DashboardSR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widget\WidgetView\DashboardTR.resx">
+      <DependentUpon>DashboardTR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widget\WidgetView\Datenow.resx">
+      <DependentUpon>Datenow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widget\WidgetView\Detail.resx">
+      <DependentUpon>Detail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widget\WidgetView\exampleGhrap.resx">
+      <DependentUpon>exampleGhrap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widget\WidgetView\LoginInfo.resx">
+      <DependentUpon>LoginInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widget\WidgetView\navMenubar.resx">
+      <DependentUpon>navMenubar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widget\WidgetView\patientonthisweek.resx">
+      <DependentUpon>patientonthisweek.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widget\WidgetView\Pending Report by Locations.resx">
+      <DependentUpon>Pending Report by Locations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widget\WidgetView\PendingByDoctor.resx">
+      <DependentUpon>PendingByDoctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widget\WidgetView\PendingList.resx">
+      <DependentUpon>PendingList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widget\WidgetView\TodayActivities.resx">
+      <DependentUpon>TodayActivities.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widget\WidgetView\UserControl1.resx">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserMaster.resx">
+      <DependentUpon>UserMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Welcome_New.resx">
+      <DependentUpon>Welcome_New.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Welcome.resx">
+      <DependentUpon>Welcome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widget\WidgetView_New\DashBoardCR_New.resx">
+      <DependentUpon>DashBoardCR_New.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraUserControl1.resx">
+      <DependentUpon>XtraUserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Xtra_report\XtraReport_WorkSheet.resx">
+      <DependentUpon>XtraReport_WorkSheet.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ConfigurationFld\DataSet_Antibiotic.xsc">
+      <DependentUpon>DataSet_Antibiotic.xsd</DependentUpon>
+    </None>
+    <None Include="ConfigurationFld\DataSet_Antibiotic.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Antibiotic.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ConfigurationFld\DataSet_Antibiotic.xss">
+      <DependentUpon>DataSet_Antibiotic.xsd</DependentUpon>
+    </None>
+    <None Include="ConfigurationFld\DataSet_Antibiotic_Group.xsc">
+      <DependentUpon>DataSet_Antibiotic_Group.xsd</DependentUpon>
+    </None>
+    <None Include="ConfigurationFld\DataSet_Antibiotic_Group.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Antibiotic_Group.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ConfigurationFld\DataSet_Antibiotic_Group.xss">
+      <DependentUpon>DataSet_Antibiotic_Group.xsd</DependentUpon>
+    </None>
+    <None Include="ConfigurationFld\DataSet_Media.xsc">
+      <DependentUpon>DataSet_Media.xsd</DependentUpon>
+    </None>
+    <None Include="ConfigurationFld\DataSet_Media.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Media.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ConfigurationFld\DataSet_Media.xss">
+      <DependentUpon>DataSet_Media.xsd</DependentUpon>
+    </None>
+    <None Include="ConfigurationFld\DataSet_Protocol.xsc">
+      <DependentUpon>DataSet_Protocol.xsd</DependentUpon>
+    </None>
+    <None Include="ConfigurationFld\DataSet_Protocol.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Protocol.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ConfigurationFld\DataSet_Protocol.xss">
+      <DependentUpon>DataSet_Protocol.xsd</DependentUpon>
+    </None>
+    <None Include="ConfigurationFld\DataSet_Specimen.xsc">
+      <DependentUpon>DataSet_Specimen.xsd</DependentUpon>
+    </None>
+    <None Include="ConfigurationFld\DataSet_Specimen.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Specimen.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ConfigurationFld\DataSet_Specimen.xss">
+      <DependentUpon>DataSet_Specimen.xsd</DependentUpon>
+    </None>
+    <None Include="ConfigurationFld\DataSet_Stain.xsc">
+      <DependentUpon>DataSet_Stain.xsd</DependentUpon>
+    </None>
+    <None Include="ConfigurationFld\DataSet_Stain.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Stain.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ConfigurationFld\DataSet_Stain.xss">
+      <DependentUpon>DataSet_Stain.xsd</DependentUpon>
+    </None>
+    <None Include="ConfigurationFld\DataSet_TEST.xsc">
+      <DependentUpon>DataSet_TEST.xsd</DependentUpon>
+    </None>
+    <None Include="ConfigurationFld\DataSet_TEST.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_TEST.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ConfigurationFld\DataSet_TEST.xss">
+      <DependentUpon>DataSet_TEST.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_CustomizeResult.xsc">
+      <DependentUpon>DataSet_CustomizeResult.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_CustomizeResult.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_CustomizeResult.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet_CustomizeResult.xss">
+      <DependentUpon>DataSet_CustomizeResult.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset_SpecimenType.xsc">
+      <DependentUpon>Dataset_SpecimenType.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset_SpecimenType.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Dataset_SpecimenType.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Dataset_SpecimenType.xss">
+      <DependentUpon>Dataset_SpecimenType.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_SpecimenType1.xsc">
+      <DependentUpon>DataSet_SpecimenType1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_SpecimenType1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_SpecimenType1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet_SpecimenType1.xss">
+      <DependentUpon>DataSet_SpecimenType1.xsd</DependentUpon>
+    </None>
+    <None Include="Instrument\MicroScan\Settings_MicroScan.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings_MicroScan.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="RequestFld\DataSet_SearchPAT.xsc">
+      <DependentUpon>DataSet_SearchPAT.xsd</DependentUpon>
+    </None>
+    <None Include="RequestFld\DataSet_SearchPAT.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_SearchPAT.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="RequestFld\DataSet_SearchPAT.xss">
+      <DependentUpon>DataSet_SearchPAT.xsd</DependentUpon>
+    </None>
+    <None Include="Result\DataSet_Antimicrobial_Breakpoint.xsc">
+      <DependentUpon>DataSet_Antimicrobial_Breakpoint.xsd</DependentUpon>
+    </None>
+    <None Include="Result\DataSet_Antimicrobial_Breakpoint.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Antimicrobial_Breakpoint.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Result\DataSet_Antimicrobial_Breakpoint.xss">
+      <DependentUpon>DataSet_Antimicrobial_Breakpoint.xsd</DependentUpon>
+    </None>
+    <None Include="Result\DataSet_Culture.xsc">
+      <DependentUpon>DataSet_Culture.xsd</DependentUpon>
+    </None>
+    <None Include="Result\DataSet_Culture.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Culture.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Result\DataSet_Culture.xss">
+      <DependentUpon>DataSet_Culture.xsd</DependentUpon>
+    </None>
+    <None Include="Result\DataSet_StainRes.xsc">
+      <DependentUpon>DataSet_StainRes.xsd</DependentUpon>
+    </None>
+    <None Include="Result\DataSet_StainRes.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_StainRes.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Result\DataSet_StainRes.xss">
+      <DependentUpon>DataSet_StainRes.xsd</DependentUpon>
+    </None>
+    <None Include="setting_spy.ini" />
+    <None Include="UNIQUEDataSet.xsc">
+      <DependentUpon>UNIQUEDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="UNIQUEDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UNIQUEDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UNIQUEDataSet.xss">
+      <DependentUpon>UNIQUEDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="UNIQUEDataSet1.xsc">
+      <DependentUpon>UNIQUEDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="UNIQUEDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UNIQUEDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UNIQUEDataSet1.xss">
+      <DependentUpon>UNIQUEDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="UNIQUEDataSet2.xsc">
+      <DependentUpon>UNIQUEDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="UNIQUEDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UNIQUEDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UNIQUEDataSet2.xss">
+      <DependentUpon>UNIQUEDataSet2.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\Clear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\Menu\Dashboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\Menu\Patient.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\Universal.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\patient\Commission.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\patient\OnLeave.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\patient\Terminated.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\Toolbar\OrderList.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\Toolbar\New.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\Toolbar\Edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\Toolbar\Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\Toolbar\Cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\Toolbar\MailMerge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\Toolbar\Reports.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\Toolbar\neworder.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\Toolbar\Settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\Toolbar\createorder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\Toolbar\Print.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\Toolbar\Note.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\Toolbar\clinical.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\Toolbar\Task.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\status\Completed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\status\InProgress.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\status\Deferred.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\status\NotStarted.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\circle_red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\icon-save-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\icon-save-close-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Administrator-icon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New Folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checkbox_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\science %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\protocol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sensitivity.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medical %2851%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\844746_medical_512x512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\antibiotic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medical %2876%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\health %288%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Locations.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\health.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doctors_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medical %2852%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\organismFam.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\graph.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\antibreak.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ugent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\protocol1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\insert_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addfile_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\insert_32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addfile_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addfile_16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editcontact_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editcontact_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\merge_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\merge_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\historyitem_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\historyitem_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\icon-mobile-phone-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\icon-home-phone-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\icon-email-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\icon-print-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\Mr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\Mrs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\icon-prefix-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\feature_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\feature_16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hide_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\doctoricon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notes_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contact_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notes_16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contact_16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medical %2858%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medical %2823%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medical %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\health %2810%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\education %288%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Media.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\detection-test-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\microscope-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medical %2867%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sensitivities16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customer_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tag_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\assignto_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usergroup_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\userlogin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\show_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_icon.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icon.ico" />
+    <None Include="Resources\logoTop-bar.png" />
+    <None Include="Resources\logoTop-bar1.png" />
+    <None Include="icon\User-Group-icon_24.png" />
+    <None Include="icon\Role.png" />
+    <Content Include="Resources\Unique.png" />
+    <None Include="Resources\Unique1.png" />
+    <None Include="Resources\Unique2.png" />
+    <Content Include="Resources\User-Group-icon_24.png" />
+    <Content Include="Unique.ico" />
+    <Content Include="Universal.ico" />
+    <None Include="Resources\Administrator-icon_32.png" />
+    <Content Include="DB\dbUniqueMaster.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DB\dbUniqueMaster_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>dbUniqueMaster.mdf</DependentUpon>
+    </Content>
+    <None Include="Resources\database-settings-icon.png" />
+    <None Include="Resources\icons8-connect-64.png" />
+    <None Include="Resources\accepted_48.png" />
+    <None Include="Resources\Actions-arrow-left-icon.png" />
+    <None Include="Resources\Actions-document-edit-icon_32.png" />
+    <None Include="Resources\Actions-edit-clear-icon.png" />
+    <None Include="Resources\Actions-edit-clear-icon2.png" />
+    <None Include="Resources\Actions-edit-copy-icon.png" />
+    <None Include="Resources\Actions-im-kick-user-icon.png" />
+    <None Include="Resources\add-icon_32.png" />
+    <None Include="Resources\Adobe-PDF-Document-icon_32.png" />
+    <None Include="Resources\Applications-icon.png" />
+    <None Include="Resources\Apps-notes-icon_24.png" />
+    <None Include="Resources\Apps-preferences-contact-list-icon.png" />
+    <None Include="Resources\Apps-system-software-update-icon__32.png" />
+    <None Include="Resources\Apps-system-software-update-icon_32.png" />
+    <None Include="Resources\barcode-folded-icon.png" />
+    <None Include="Resources\Barcode-icon.jpg" />
+    <None Include="Resources\Barcode-icon.png" />
+    <None Include="Resources\barcode-icon_48.png" />
+    <None Include="Resources\barcode-scanner-icon.png" />
+    <None Include="Resources\Blocknotes-icon_32.png" />
+    <None Include="Resources\Business-Multiple-Input-icon_48.png" />
+    <None Include="Resources\Button-Add-icon_24.png" />
+    <None Include="Resources\Button-Close-icon_24.png" />
+    <None Include="Resources\Button-Refresh-icon_24.png" />
+    <None Include="Resources\Button-Refresh-icon_32.png" />
+    <None Include="Resources\cancel_48.png" />
+    <None Include="Resources\Clear-icon-24.png" />
+    <None Include="Resources\colba-icon-128.png" />
+    <None Include="Resources\delete-icon.png" />
+    <None Include="Resources\delete-icon2.png" />
+    <None Include="Resources\doctor-bg2.jpg" />
+    <None Include="Resources\Ecommerce-Barcode-icon.png" />
+    <None Include="Resources\File-Open-icon.png" />
+    <None Include="Resources\Files-Pdf-icon.png" />
+    <None Include="Resources\filetype-pdf-icon.png" />
+    <None Include="Resources\Floppy-Disk-icon.png" />
+    <None Include="Resources\Go-back-icon_32.png" />
+    <None Include="Resources\green-cross-icon__32.png" />
+    <None Include="Resources\Home-icon_24.png" />
+    <None Include="Resources\icons %2845%29.png" />
+    <None Include="Resources\Knob-Loop-On-icon_24.png" />
+    <None Include="Resources\Log-Out-icon.png" />
+    <None Include="Resources\Misc-Download-Database-icon_32.png" />
+    <None Include="Resources\Misc-Download-Database-icon_42.png" />
+    <None Include="Resources\Ok-icon.png" />
+    <None Include="Resources\open-file-icon-save.png" />
+    <None Include="Resources\Patients-icon_24.png" />
+    <None Include="Resources\question-type-multiple-correct-icon.png" />
+    <None Include="Resources\Question-type-multiple-correct-icon_32.png" />
+    <None Include="Resources\save.png" />
+    <None Include="Resources\save2.png" />
+    <None Include="Resources\save-button-icon-27.jpg" />
+    <None Include="Resources\Save-icon__32.png" />
+    <None Include="Resources\save-icon-32x32-3.jpg" />
+    <None Include="Resources\save-image.png" />
+    <None Include="Resources\save-image2.png" />
+    <None Include="Resources\save-image-icon-20.jpg" />
+    <None Include="Resources\save-image-icon-20.png" />
+    <None Include="Resources\search.png" />
+    <None Include="Resources\search-b-icon_32.png" />
+    <None Include="Resources\search-b-icon_48.png" />
+    <None Include="Resources\secrecy-icon-login1.png" />
+    <None Include="Resources\Start-Menu-Search-icon.png" />
+    <None Include="Resources\Start-Menu-Search-icon-24.png" />
+    <None Include="Resources\symbol-delete-icon_24.png" />
+    <None Include="Resources\System-icon_32.png" />
+    <None Include="Resources\tubes-icon-128.png" />
+    <None Include="Resources\tubes-no-shadow-icon-48.png" />
+    <None Include="Resources\tubes-no-shadow-icon-64.png" />
+    <None Include="Resources\tubes-no-shadow-icon-72.png" />
+    <None Include="Resources\Undo-icon_32.png" />
+    <None Include="Resources\Very-Basic-Services-icon_32.png" />
+    <None Include="Resources\Xml-tool-icon_32.png" />
+    <None Include="Resources\Zoom-icon.png" />
+    <None Include="icon\Status-battery-080-icon.png" />
+    <None Include="icon\laboratory-icon.png" />
+    <None Include="icon\script-link-icon.png" />
+    <None Include="icon\agar.png" />
+    <None Include="icon\sim-card-icon.png" />
+    <None Include="icon\trash-icon.png" />
+    <None Include="icon\Refresh-icon-32.png" />
+    <None Include="Resources\IMG_1956.JPG" />
+    <None Include="icon\LOGONEW.jpg" />
+    <None Include="Resources\Group 291.png" />
+    <None Include="Resources\Group 2911.png" />
+    <None Include="icon\Menu\cr.png" />
+    <None Include="icon\lab-icon24.png" />
+    <None Include="Resources\Logo_PUA.jpg" />
+    <None Include="Resources\Report หัว ISO_1.jpg" />
+    <None Include="Resources\Report หัว ISO_2.jpg" />
+    <None Include="Resources\ConditionalFormatting_32x32.png" />
+    <Content Include="Setting_ORM.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ConfigurationFld\Control_board\" />
+    <Folder Include="Forms\Result_report\Class\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RaxUploader\RaxUploader.csproj">
+      <Project>{b0d8ece0-c718-40e0-870a-a0f2636a7ef8}</Project>
+      <Name>RaxUploader</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UniquePro\UniquePro.csproj">
+      <Project>{33bcf653-7787-4a0b-a6d7-e95ad0e9d506}</Project>
+      <Name>UniquePro</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

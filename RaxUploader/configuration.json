@@ -1,0 +1,13 @@
+﻿{
+  "connectionString": "Data Source=xxx;Initial Catalog=xxxx;Persist Security Info=False;User Id=xxx;Password=xxx;",
+  "failFolder": "D:\\REQ\\FAIL\\",
+  "backupfolder": "D:\\REQ\\BK\\",
+  "heightfolder": "D:\\REQ\\",
+  "folders": [
+    //"\\\\192.168.228.17\\sfcBk\\*.csv"
+    "D:\\REQ\\*.txt"
+    //"\\\\10.80.228.62\\sfcBk1\\*.txt"
+  ],
+  "computername": "songdechs",
+  "scanInterval": 100
+}

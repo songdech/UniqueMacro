@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet_StainRes" targetNamespace="http://tempuri.org/DataSet_StainRes.xsd" xmlns:mstns="http://tempuri.org/DataSet_StainRes.xsd" xmlns="http://tempuri.org/DataSet_StainRes.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="TESTConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="TESTConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.UNIQUE.Properties.Settings.GlobalReference.Default.TESTConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="TESTConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT SUBREQMB_STAINS.SUBREQMBSTAINID,SUBREQMB_STAINS.COLONYID,SUBREQMB_STAINS.SUBREQUESTID,SUBREQMB_STAINS.MBSTAINID,SUBREQMB_STAINS.VALREQUESTED,SUBREQMB_STAINS.CONSOLIDATIONSTATUS,SUBREQMB_STAINS.CREATEUSER,SUBREQMB_STAINS.CREATIONDATE,SUBREQMB_STAINS.LOGUSERID,SUBREQMB_STAINS.LOGDATE,SUBREQMB_STAINS.NOTPRINTABLE,DICT_MB_STAINS.MBSTAINID,DICT_MB_STAINS.MBSTAINCODE,DICT_MB_STAINS.MBSTAINCREDATE,DICT_MB_STAINS.SHORTTEXT,DICT_MB_STAINS.FULLTEXT,DICT_MB_STAINS.DICTCONSOSTATUS,DICT_MB_STAINS.LISTESTCODE, DICT_MB_STAINS.FIRSTITEMID,DICT_MB_STAINS.STARTVALIDDATE,DICT_MB_STAINS.ENDVALIDDATE,DICT_MB_STAINS.NOTPRINTABLE, MB_STAINS_OBSERVATIONS.SUBREQMBSTAINID,MB_STAINS_OBSERVATIONS.MORPHOBSERVATION,MB_STAINS_OBSERVATIONS.CREATEUSER,MB_STAINS_OBSERVATIONS.CREATIONDATE,MB_STAINS_OBSERVATIONS.QUANTITATIVERESULT,MB_STAINS_OBSERVATIONS.COMMENTS,MB_STAINS_OBSERVATIONS.RESUPDDATE,MB_STAINS_OBSERVATIONS.LOGUSERID,MB_STAINS_OBSERVATIONS.LOGDATE,MB_STAINS_OBSERVATIONS.MORPHOBSERVATIONID
+ FROM SUBREQMB_STAINS LEFT OUTER JOIN DICT_MB_STAINS 
+ ON (SUBREQMB_STAINS.MBSTAINID = DICT_MB_STAINS.MBSTAINID )
+  LEFT OUTER JOIN MB_STAINS_OBSERVATIONS 
+  ON (SUBREQMB_STAINS.SUBREQMBSTAINID = MB_STAINS_OBSERVATIONS.SUBREQMBSTAINID ) 
+  WHERE  SUBREQMB_STAINS.COLONYID IS NULL AND SUBREQMB_STAINS.SUBREQUESTID = 2398 
+  ORDER BY SUBREQMB_STAINS.SUBREQMBSTAINID</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="SUBREQMBSTAINID" DataSetColumn="SUBREQMBSTAINID" />
+              <Mapping SourceColumn="COLONYID" DataSetColumn="COLONYID" />
+              <Mapping SourceColumn="SUBREQUESTID" DataSetColumn="SUBREQUESTID" />
+              <Mapping SourceColumn="MBSTAINID" DataSetColumn="MBSTAINID" />
+              <Mapping SourceColumn="VALREQUESTED" DataSetColumn="VALREQUESTED" />
+              <Mapping SourceColumn="CONSOLIDATIONSTATUS" DataSetColumn="CONSOLIDATIONSTATUS" />
+              <Mapping SourceColumn="CREATEUSER" DataSetColumn="CREATEUSER" />
+              <Mapping SourceColumn="CREATIONDATE" DataSetColumn="CREATIONDATE" />
+              <Mapping SourceColumn="LOGUSERID" DataSetColumn="LOGUSERID" />
+              <Mapping SourceColumn="LOGDATE" DataSetColumn="LOGDATE" />
+              <Mapping SourceColumn="NOTPRINTABLE" DataSetColumn="NOTPRINTABLE" />
+              <Mapping SourceColumn="MBSTAINID1" DataSetColumn="MBSTAINID1" />
+              <Mapping SourceColumn="MBSTAINCODE" DataSetColumn="MBSTAINCODE" />
+              <Mapping SourceColumn="MBSTAINCREDATE" DataSetColumn="MBSTAINCREDATE" />
+              <Mapping SourceColumn="SHORTTEXT" DataSetColumn="SHORTTEXT" />
+              <Mapping SourceColumn="FULLTEXT" DataSetColumn="FULLTEXT" />
+              <Mapping SourceColumn="DICTCONSOSTATUS" DataSetColumn="DICTCONSOSTATUS" />
+              <Mapping SourceColumn="LISTESTCODE" DataSetColumn="LISTESTCODE" />
+              <Mapping SourceColumn="FIRSTITEMID" DataSetColumn="FIRSTITEMID" />
+              <Mapping SourceColumn="STARTVALIDDATE" DataSetColumn="STARTVALIDDATE" />
+              <Mapping SourceColumn="ENDVALIDDATE" DataSetColumn="ENDVALIDDATE" />
+              <Mapping SourceColumn="NOTPRINTABLE1" DataSetColumn="NOTPRINTABLE1" />
+              <Mapping SourceColumn="SUBREQMBSTAINID1" DataSetColumn="SUBREQMBSTAINID1" />
+              <Mapping SourceColumn="MORPHOBSERVATION" DataSetColumn="MORPHOBSERVATION" />
+              <Mapping SourceColumn="CREATEUSER1" DataSetColumn="CREATEUSER1" />
+              <Mapping SourceColumn="CREATIONDATE1" DataSetColumn="CREATIONDATE1" />
+              <Mapping SourceColumn="QUANTITATIVERESULT" DataSetColumn="QUANTITATIVERESULT" />
+              <Mapping SourceColumn="COMMENTS" DataSetColumn="COMMENTS" />
+              <Mapping SourceColumn="RESUPDDATE" DataSetColumn="RESUPDDATE" />
+              <Mapping SourceColumn="LOGUSERID1" DataSetColumn="LOGUSERID1" />
+              <Mapping SourceColumn="LOGDATE1" DataSetColumn="LOGDATE1" />
+              <Mapping SourceColumn="MORPHOBSERVATIONID" DataSetColumn="MORPHOBSERVATIONID" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet_StainRes" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet_StainRes" msprop:Generator_UserDSName="DataSet_StainRes">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowClassName="DataTable1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SUBREQMBSTAINID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnSUBREQMBSTAINID" msprop:Generator_ColumnPropNameInRow="SUBREQMBSTAINID" msprop:Generator_ColumnPropNameInTable="SUBREQMBSTAINIDColumn" msprop:Generator_UserColumnName="SUBREQMBSTAINID" type="xs:int" />
+              <xs:element name="COLONYID" msprop:Generator_ColumnVarNameInTable="columnCOLONYID" msprop:Generator_ColumnPropNameInRow="COLONYID" msprop:Generator_ColumnPropNameInTable="COLONYIDColumn" msprop:Generator_UserColumnName="COLONYID" type="xs:int" minOccurs="0" />
+              <xs:element name="SUBREQUESTID" msprop:Generator_ColumnVarNameInTable="columnSUBREQUESTID" msprop:Generator_ColumnPropNameInRow="SUBREQUESTID" msprop:Generator_ColumnPropNameInTable="SUBREQUESTIDColumn" msprop:Generator_UserColumnName="SUBREQUESTID" type="xs:int" minOccurs="0" />
+              <xs:element name="MBSTAINID" msprop:Generator_ColumnVarNameInTable="columnMBSTAINID" msprop:Generator_ColumnPropNameInRow="MBSTAINID" msprop:Generator_ColumnPropNameInTable="MBSTAINIDColumn" msprop:Generator_UserColumnName="MBSTAINID" type="xs:int" />
+              <xs:element name="VALREQUESTED" msprop:Generator_ColumnVarNameInTable="columnVALREQUESTED" msprop:Generator_ColumnPropNameInRow="VALREQUESTED" msprop:Generator_ColumnPropNameInTable="VALREQUESTEDColumn" msprop:Generator_UserColumnName="VALREQUESTED" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="CONSOLIDATIONSTATUS" msprop:Generator_ColumnVarNameInTable="columnCONSOLIDATIONSTATUS" msprop:Generator_ColumnPropNameInRow="CONSOLIDATIONSTATUS" msprop:Generator_ColumnPropNameInTable="CONSOLIDATIONSTATUSColumn" msprop:Generator_UserColumnName="CONSOLIDATIONSTATUS" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="CREATEUSER" msprop:Generator_ColumnVarNameInTable="columnCREATEUSER" msprop:Generator_ColumnPropNameInRow="CREATEUSER" msprop:Generator_ColumnPropNameInTable="CREATEUSERColumn" msprop:Generator_UserColumnName="CREATEUSER">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CREATIONDATE" msprop:Generator_ColumnVarNameInTable="columnCREATIONDATE" msprop:Generator_ColumnPropNameInRow="CREATIONDATE" msprop:Generator_ColumnPropNameInTable="CREATIONDATEColumn" msprop:Generator_UserColumnName="CREATIONDATE" type="xs:dateTime" />
+              <xs:element name="LOGUSERID" msprop:Generator_ColumnVarNameInTable="columnLOGUSERID" msprop:Generator_ColumnPropNameInRow="LOGUSERID" msprop:Generator_ColumnPropNameInTable="LOGUSERIDColumn" msprop:Generator_UserColumnName="LOGUSERID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LOGDATE" msprop:Generator_ColumnVarNameInTable="columnLOGDATE" msprop:Generator_ColumnPropNameInRow="LOGDATE" msprop:Generator_ColumnPropNameInTable="LOGDATEColumn" msprop:Generator_UserColumnName="LOGDATE" type="xs:dateTime" />
+              <xs:element name="NOTPRINTABLE" msprop:Generator_ColumnVarNameInTable="columnNOTPRINTABLE" msprop:Generator_ColumnPropNameInRow="NOTPRINTABLE" msprop:Generator_ColumnPropNameInTable="NOTPRINTABLEColumn" msprop:Generator_UserColumnName="NOTPRINTABLE" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="MBSTAINID1" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnMBSTAINID1" msprop:Generator_ColumnPropNameInRow="MBSTAINID1" msprop:Generator_ColumnPropNameInTable="MBSTAINID1Column" msprop:Generator_UserColumnName="MBSTAINID1" type="xs:int" minOccurs="0" />
+              <xs:element name="MBSTAINCODE" msprop:Generator_ColumnVarNameInTable="columnMBSTAINCODE" msprop:Generator_ColumnPropNameInRow="MBSTAINCODE" msprop:Generator_ColumnPropNameInTable="MBSTAINCODEColumn" msprop:Generator_UserColumnName="MBSTAINCODE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MBSTAINCREDATE" msprop:Generator_ColumnVarNameInTable="columnMBSTAINCREDATE" msprop:Generator_ColumnPropNameInRow="MBSTAINCREDATE" msprop:Generator_ColumnPropNameInTable="MBSTAINCREDATEColumn" msprop:Generator_UserColumnName="MBSTAINCREDATE" type="xs:int" minOccurs="0" />
+              <xs:element name="SHORTTEXT" msprop:Generator_ColumnVarNameInTable="columnSHORTTEXT" msprop:Generator_ColumnPropNameInRow="SHORTTEXT" msprop:Generator_ColumnPropNameInTable="SHORTTEXTColumn" msprop:Generator_UserColumnName="SHORTTEXT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FULLTEXT" msprop:Generator_ColumnVarNameInTable="columnFULLTEXT" msprop:Generator_ColumnPropNameInRow="FULLTEXT" msprop:Generator_ColumnPropNameInTable="FULLTEXTColumn" msprop:Generator_UserColumnName="FULLTEXT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DICTCONSOSTATUS" msprop:Generator_ColumnVarNameInTable="columnDICTCONSOSTATUS" msprop:Generator_ColumnPropNameInRow="DICTCONSOSTATUS" msprop:Generator_ColumnPropNameInTable="DICTCONSOSTATUSColumn" msprop:Generator_UserColumnName="DICTCONSOSTATUS" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="LISTESTCODE" msprop:Generator_ColumnVarNameInTable="columnLISTESTCODE" msprop:Generator_ColumnPropNameInRow="LISTESTCODE" msprop:Generator_ColumnPropNameInTable="LISTESTCODEColumn" msprop:Generator_UserColumnName="LISTESTCODE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FIRSTITEMID" msprop:Generator_ColumnVarNameInTable="columnFIRSTITEMID" msprop:Generator_ColumnPropNameInRow="FIRSTITEMID" msprop:Generator_ColumnPropNameInTable="FIRSTITEMIDColumn" msprop:Generator_UserColumnName="FIRSTITEMID" type="xs:int" minOccurs="0" />
+              <xs:element name="STARTVALIDDATE" msprop:Generator_ColumnVarNameInTable="columnSTARTVALIDDATE" msprop:Generator_ColumnPropNameInRow="STARTVALIDDATE" msprop:Generator_ColumnPropNameInTable="STARTVALIDDATEColumn" msprop:Generator_UserColumnName="STARTVALIDDATE" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ENDVALIDDATE" msprop:Generator_ColumnVarNameInTable="columnENDVALIDDATE" msprop:Generator_ColumnPropNameInRow="ENDVALIDDATE" msprop:Generator_ColumnPropNameInTable="ENDVALIDDATEColumn" msprop:Generator_UserColumnName="ENDVALIDDATE" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="NOTPRINTABLE1" msprop:Generator_ColumnVarNameInTable="columnNOTPRINTABLE1" msprop:Generator_ColumnPropNameInRow="NOTPRINTABLE1" msprop:Generator_ColumnPropNameInTable="NOTPRINTABLE1Column" msprop:Generator_UserColumnName="NOTPRINTABLE1" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="SUBREQMBSTAINID1" msprop:Generator_ColumnVarNameInTable="columnSUBREQMBSTAINID1" msprop:Generator_ColumnPropNameInRow="SUBREQMBSTAINID1" msprop:Generator_ColumnPropNameInTable="SUBREQMBSTAINID1Column" msprop:Generator_UserColumnName="SUBREQMBSTAINID1" type="xs:int" minOccurs="0" />
+              <xs:element name="MORPHOBSERVATION" msprop:Generator_ColumnVarNameInTable="columnMORPHOBSERVATION" msprop:Generator_ColumnPropNameInRow="MORPHOBSERVATION" msprop:Generator_ColumnPropNameInTable="MORPHOBSERVATIONColumn" msprop:Generator_UserColumnName="MORPHOBSERVATION" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CREATEUSER1" msprop:Generator_ColumnVarNameInTable="columnCREATEUSER1" msprop:Generator_ColumnPropNameInRow="CREATEUSER1" msprop:Generator_ColumnPropNameInTable="CREATEUSER1Column" msprop:Generator_UserColumnName="CREATEUSER1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CREATIONDATE1" msprop:Generator_ColumnVarNameInTable="columnCREATIONDATE1" msprop:Generator_ColumnPropNameInRow="CREATIONDATE1" msprop:Generator_ColumnPropNameInTable="CREATIONDATE1Column" msprop:Generator_UserColumnName="CREATIONDATE1" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="QUANTITATIVERESULT" msprop:Generator_ColumnVarNameInTable="columnQUANTITATIVERESULT" msprop:Generator_ColumnPropNameInRow="QUANTITATIVERESULT" msprop:Generator_ColumnPropNameInTable="QUANTITATIVERESULTColumn" msprop:Generator_UserColumnName="QUANTITATIVERESULT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="COMMENTS" msprop:Generator_ColumnVarNameInTable="columnCOMMENTS" msprop:Generator_ColumnPropNameInRow="COMMENTS" msprop:Generator_ColumnPropNameInTable="COMMENTSColumn" msprop:Generator_UserColumnName="COMMENTS" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RESUPDDATE" msprop:Generator_ColumnVarNameInTable="columnRESUPDDATE" msprop:Generator_ColumnPropNameInRow="RESUPDDATE" msprop:Generator_ColumnPropNameInTable="RESUPDDATEColumn" msprop:Generator_UserColumnName="RESUPDDATE" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="LOGUSERID1" msprop:Generator_ColumnVarNameInTable="columnLOGUSERID1" msprop:Generator_ColumnPropNameInRow="LOGUSERID1" msprop:Generator_ColumnPropNameInTable="LOGUSERID1Column" msprop:Generator_UserColumnName="LOGUSERID1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LOGDATE1" msprop:Generator_ColumnVarNameInTable="columnLOGDATE1" msprop:Generator_ColumnPropNameInRow="LOGDATE1" msprop:Generator_ColumnPropNameInTable="LOGDATE1Column" msprop:Generator_UserColumnName="LOGDATE1" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="MORPHOBSERVATIONID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnMORPHOBSERVATIONID" msprop:Generator_ColumnPropNameInRow="MORPHOBSERVATIONID" msprop:Generator_ColumnPropNameInTable="MORPHOBSERVATIONIDColumn" msprop:Generator_UserColumnName="MORPHOBSERVATIONID" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

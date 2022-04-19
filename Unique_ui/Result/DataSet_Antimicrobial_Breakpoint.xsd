@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet_Antimicrobial_Breakpoint" targetNamespace="http://tempuri.org/DataSet_Antimicrobial_Breakpoint.xsd" xmlns:mstns="http://tempuri.org/DataSet_Antimicrobial_Breakpoint.xsd" xmlns="http://tempuri.org/DataSet_Antimicrobial_Breakpoint.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="UNIQUEConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="UNIQUEConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.UNIQUE.Properties.Settings.GlobalReference.Default.UNIQUEConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="UNIQUEConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>
+
+select dict_mb_organisms.*, DICT_MB_ANTIBIOTICS.ANTIBIOTICCODE,DICT_MB_ANTIBIOTICS.FULLTEXT,SUBREQMB_ANTIBIOTICS.RESULT,SUBREQMB_ANTIBIOTICS.RESULTVALUE
+,DICT_ANTIMICROBIAL_BREAKPOINT.MICCODE,DICT_ANTIMICROBIAL_BREAKPOINT.BREAKPOINTNAME,DICT_MB_METHODS.METHODMBCODE,DICT_MB_METHODS.UNITS,DICT_ANTIMICROBIAL_BREAKPOINT.THRESHOLDLOWER,DICT_ANTIMICROBIAL_BREAKPOINT.THRESHOLDHIGHER,DICT_ANTIMICROBIAL_BREAKPOINT_LISTS.CONCLOWVALUE,DICT_ANTIMICROBIAL_BREAKPOINT_LISTS.CONCHIGHVALUE, 
+	CASE DICT_ANTIMICROBIAL_BREAKPOINT.THRESHOLDLOWER
+		WHEN '0' THEN '&lt;'
+		WHEN '1' THEN '&lt;='
+		ELSE '' 
+		END AS 'THRESHOLDLOWER',
+	CASE DICT_ANTIMICROBIAL_BREAKPOINT.THRESHOLDHIGHER
+	WHEN '3' THEN '&gt;'
+	WHEN '2' THEN '&gt;='
+	ELSE '' + ' '
+	END AS 'THRESHOLDHIGHER', CONCLOWVALUE + ' - ' +CONCHIGHVALUE AS 'BREAKPOINT' from dict_mb_organisms
+left outer join dict_antimicrobial_breakpoint 
+	on ( dict_mb_organisms.micid = dict_antimicrobial_breakpoint.micid)
+left outer join DICT_ANTIMICROBIAL_BREAKPOINT_LISTS 
+	on DICT_ANTIMICROBIAL_BREAKPOINT.micid = DICT_ANTIMICROBIAL_BREAKPOINT_LISTS.micid
+left outer join DICT_MB_ANTIBIOTICS 
+	on DICT_ANTIMICROBIAL_BREAKPOINT_LISTS.ANTIBIOTICID = DICT_MB_ANTIBIOTICS.ANTIBIOTICID
+left outer join SUBREQMB_ANTIBIOTICS
+	 ON DICT_MB_ANTIBIOTICS.ANTIBIOTICID = SUBREQMB_ANTIBIOTICS.ANTIBIOTICID
+left outer join DICT_MB_METHODS  ON dict_mb_organisms.METHODMBID = DICT_MB_METHODS.METHODMBID
+</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ORGANISMID" DataSetColumn="ORGANISMID" />
+              <Mapping SourceColumn="ORGANISMCODE" DataSetColumn="ORGANISMCODE" />
+              <Mapping SourceColumn="ORGANISMCREDATE" DataSetColumn="ORGANISMCREDATE" />
+              <Mapping SourceColumn="ORGANISMNAME" DataSetColumn="ORGANISMNAME" />
+              <Mapping SourceColumn="ENDVALIDDATE" DataSetColumn="ENDVALIDDATE" />
+              <Mapping SourceColumn="NOTPRINTABLE" DataSetColumn="NOTPRINTABLE" />
+              <Mapping SourceColumn="LOGUSERID" DataSetColumn="LOGUSERID" />
+              <Mapping SourceColumn="LOGDATE" DataSetColumn="LOGDATE" />
+              <Mapping SourceColumn="MICID" DataSetColumn="MICID" />
+              <Mapping SourceColumn="METHODMBID" DataSetColumn="METHODMBID" />
+              <Mapping SourceColumn="ANTIBIOTICCODE" DataSetColumn="ANTIBIOTICCODE" />
+              <Mapping SourceColumn="FULLTEXT" DataSetColumn="FULLTEXT" />
+              <Mapping SourceColumn="RESULT" DataSetColumn="RESULT" />
+              <Mapping SourceColumn="RESULTVALUE" DataSetColumn="RESULTVALUE" />
+              <Mapping SourceColumn="MICCODE" DataSetColumn="MICCODE" />
+              <Mapping SourceColumn="BREAKPOINTNAME" DataSetColumn="BREAKPOINTNAME" />
+              <Mapping SourceColumn="METHODMBCODE" DataSetColumn="METHODMBCODE" />
+              <Mapping SourceColumn="UNITS" DataSetColumn="UNITS" />
+              <Mapping SourceColumn="THRESHOLDLOWER" DataSetColumn="THRESHOLDLOWER" />
+              <Mapping SourceColumn="THRESHOLDHIGHER" DataSetColumn="THRESHOLDHIGHER" />
+              <Mapping SourceColumn="CONCLOWVALUE" DataSetColumn="CONCLOWVALUE" />
+              <Mapping SourceColumn="CONCHIGHVALUE" DataSetColumn="CONCHIGHVALUE" />
+              <Mapping SourceColumn="THRESHOLDLOWER1" DataSetColumn="THRESHOLDLOWER1" />
+              <Mapping SourceColumn="THRESHOLDHIGHER1" DataSetColumn="THRESHOLDHIGHER1" />
+              <Mapping SourceColumn="BREAKPOINT" DataSetColumn="BREAKPOINT" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet_Antimicrobial_Breakpoint" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet_Antimicrobial_Breakpoint" msprop:Generator_UserDSName="DataSet_Antimicrobial_Breakpoint">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ORGANISMID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnORGANISMID" msprop:Generator_ColumnPropNameInRow="ORGANISMID" msprop:Generator_ColumnPropNameInTable="ORGANISMIDColumn" msprop:Generator_UserColumnName="ORGANISMID" type="xs:int" />
+              <xs:element name="ORGANISMCODE" msprop:Generator_ColumnVarNameInTable="columnORGANISMCODE" msprop:Generator_ColumnPropNameInRow="ORGANISMCODE" msprop:Generator_ColumnPropNameInTable="ORGANISMCODEColumn" msprop:Generator_UserColumnName="ORGANISMCODE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ORGANISMCREDATE" msprop:Generator_ColumnVarNameInTable="columnORGANISMCREDATE" msprop:Generator_ColumnPropNameInRow="ORGANISMCREDATE" msprop:Generator_ColumnPropNameInTable="ORGANISMCREDATEColumn" msprop:Generator_UserColumnName="ORGANISMCREDATE" type="xs:dateTime" />
+              <xs:element name="ORGANISMNAME" msprop:Generator_ColumnVarNameInTable="columnORGANISMNAME" msprop:Generator_ColumnPropNameInRow="ORGANISMNAME" msprop:Generator_ColumnPropNameInTable="ORGANISMNAMEColumn" msprop:Generator_UserColumnName="ORGANISMNAME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ENDVALIDDATE" msprop:Generator_ColumnVarNameInTable="columnENDVALIDDATE" msprop:Generator_ColumnPropNameInRow="ENDVALIDDATE" msprop:Generator_ColumnPropNameInTable="ENDVALIDDATEColumn" msprop:Generator_UserColumnName="ENDVALIDDATE" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="NOTPRINTABLE" msprop:Generator_ColumnVarNameInTable="columnNOTPRINTABLE" msprop:Generator_ColumnPropNameInRow="NOTPRINTABLE" msprop:Generator_ColumnPropNameInTable="NOTPRINTABLEColumn" msprop:Generator_UserColumnName="NOTPRINTABLE" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="LOGUSERID" msprop:Generator_ColumnVarNameInTable="columnLOGUSERID" msprop:Generator_ColumnPropNameInRow="LOGUSERID" msprop:Generator_ColumnPropNameInTable="LOGUSERIDColumn" msprop:Generator_UserColumnName="LOGUSERID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LOGDATE" msprop:Generator_ColumnVarNameInTable="columnLOGDATE" msprop:Generator_ColumnPropNameInRow="LOGDATE" msprop:Generator_ColumnPropNameInTable="LOGDATEColumn" msprop:Generator_UserColumnName="LOGDATE" type="xs:dateTime" />
+              <xs:element name="MICID" msprop:Generator_ColumnVarNameInTable="columnMICID" msprop:Generator_ColumnPropNameInRow="MICID" msprop:Generator_ColumnPropNameInTable="MICIDColumn" msprop:Generator_UserColumnName="MICID" type="xs:int" minOccurs="0" />
+              <xs:element name="METHODMBID" msprop:Generator_ColumnVarNameInTable="columnMETHODMBID" msprop:Generator_ColumnPropNameInRow="METHODMBID" msprop:Generator_ColumnPropNameInTable="METHODMBIDColumn" msprop:Generator_UserColumnName="METHODMBID" type="xs:int" minOccurs="0" />
+              <xs:element name="ANTIBIOTICCODE" msprop:Generator_ColumnVarNameInTable="columnANTIBIOTICCODE" msprop:Generator_ColumnPropNameInRow="ANTIBIOTICCODE" msprop:Generator_ColumnPropNameInTable="ANTIBIOTICCODEColumn" msprop:Generator_UserColumnName="ANTIBIOTICCODE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FULLTEXT" msprop:Generator_ColumnVarNameInTable="columnFULLTEXT" msprop:Generator_ColumnPropNameInRow="FULLTEXT" msprop:Generator_ColumnPropNameInTable="FULLTEXTColumn" msprop:Generator_UserColumnName="FULLTEXT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RESULT" msprop:Generator_ColumnVarNameInTable="columnRESULT" msprop:Generator_ColumnPropNameInRow="RESULT" msprop:Generator_ColumnPropNameInTable="RESULTColumn" msprop:Generator_UserColumnName="RESULT" type="xs:string" minOccurs="0" />
+              <xs:element name="RESULTVALUE" msprop:Generator_ColumnVarNameInTable="columnRESULTVALUE" msprop:Generator_ColumnPropNameInRow="RESULTVALUE" msprop:Generator_ColumnPropNameInTable="RESULTVALUEColumn" msprop:Generator_UserColumnName="RESULTVALUE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MICCODE" msprop:Generator_ColumnVarNameInTable="columnMICCODE" msprop:Generator_ColumnPropNameInRow="MICCODE" msprop:Generator_ColumnPropNameInTable="MICCODEColumn" msprop:Generator_UserColumnName="MICCODE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BREAKPOINTNAME" msprop:Generator_ColumnVarNameInTable="columnBREAKPOINTNAME" msprop:Generator_ColumnPropNameInRow="BREAKPOINTNAME" msprop:Generator_ColumnPropNameInTable="BREAKPOINTNAMEColumn" msprop:Generator_UserColumnName="BREAKPOINTNAME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="METHODMBCODE" msprop:Generator_ColumnVarNameInTable="columnMETHODMBCODE" msprop:Generator_ColumnPropNameInRow="METHODMBCODE" msprop:Generator_ColumnPropNameInTable="METHODMBCODEColumn" msprop:Generator_UserColumnName="METHODMBCODE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UNITS" msprop:Generator_ColumnVarNameInTable="columnUNITS" msprop:Generator_ColumnPropNameInRow="UNITS" msprop:Generator_ColumnPropNameInTable="UNITSColumn" msprop:Generator_UserColumnName="UNITS" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="THRESHOLDLOWER" msprop:Generator_ColumnVarNameInTable="columnTHRESHOLDLOWER" msprop:Generator_ColumnPropNameInRow="THRESHOLDLOWER" msprop:Generator_ColumnPropNameInTable="THRESHOLDLOWERColumn" msprop:Generator_UserColumnName="THRESHOLDLOWER" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="THRESHOLDHIGHER" msprop:Generator_ColumnVarNameInTable="columnTHRESHOLDHIGHER" msprop:Generator_ColumnPropNameInRow="THRESHOLDHIGHER" msprop:Generator_ColumnPropNameInTable="THRESHOLDHIGHERColumn" msprop:Generator_UserColumnName="THRESHOLDHIGHER" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="CONCLOWVALUE" msprop:Generator_ColumnVarNameInTable="columnCONCLOWVALUE" msprop:Generator_ColumnPropNameInRow="CONCLOWVALUE" msprop:Generator_ColumnPropNameInTable="CONCLOWVALUEColumn" msprop:Generator_UserColumnName="CONCLOWVALUE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CONCHIGHVALUE" msprop:Generator_ColumnVarNameInTable="columnCONCHIGHVALUE" msprop:Generator_ColumnPropNameInRow="CONCHIGHVALUE" msprop:Generator_ColumnPropNameInTable="CONCHIGHVALUEColumn" msprop:Generator_UserColumnName="CONCHIGHVALUE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="THRESHOLDLOWER1" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTHRESHOLDLOWER1" msprop:Generator_ColumnPropNameInRow="THRESHOLDLOWER1" msprop:Generator_ColumnPropNameInTable="THRESHOLDLOWER1Column" msprop:Generator_UserColumnName="THRESHOLDLOWER1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="THRESHOLDHIGHER1" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTHRESHOLDHIGHER1" msprop:Generator_ColumnPropNameInRow="THRESHOLDHIGHER1" msprop:Generator_ColumnPropNameInTable="THRESHOLDHIGHER1Column" msprop:Generator_UserColumnName="THRESHOLDHIGHER1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BREAKPOINT" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnBREAKPOINT" msprop:Generator_ColumnPropNameInRow="BREAKPOINT" msprop:Generator_ColumnPropNameInTable="BREAKPOINTColumn" msprop:Generator_UserColumnName="BREAKPOINT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="53" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DataTable1" />
+      <xs:field xpath="mstns:ORGANISMID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
